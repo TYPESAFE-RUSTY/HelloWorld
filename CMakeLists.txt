@@ -8,6 +8,7 @@ message("Adding all cpp files in src folder as dependencies")
 file(GLOB SOURCES src/*.cpp)
 
 message("Adding submodules as dependencies")
+add_subdirectory(lib/glew)
 add_subdirectory(lib/glfw)
 add_subdirectory(lib/glm)
 
@@ -22,6 +23,6 @@ target_include_directories(${PROJECT_NAME}
 )
 
 message("Linking command updated")
-target_link_libraries(${PROJECT_NAME} glfw )
+target_link_libraries(${PROJECT_NAME} glfw libglew_static)
 
 message("All ready to compile")

@@ -2,7 +2,7 @@
 
 int main()
 {
-    window window(500, 500, "Hello World!");
+    window window(1024, 768, "Hello opengl");
     window.start();
     return EXIT_SUCCESS;
 }
