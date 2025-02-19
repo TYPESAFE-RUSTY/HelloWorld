@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.31)
+cmake_minimum_required(VERSION 3.20)
 set(CMAKE_CXX_STANDARD 17)
 
 # gives name to the output executable file 
@@ -19,16 +19,9 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 message("Updating include path")
 target_include_directories(${PROJECT_NAME}
     PUBLIC ${PROJECT_SOURCE_DIR}/src/include
-    PUBLIC ${PROJECT_SOURCE_DIR}/lib/glfw/include
-    PUBLIC ${PROJECT_SOURCE_DIR}/lib/glm/glm
-)
-
-message("Updating Linkers path")
-target_link_directories(${PROJECT_NAME}
-    PRIVATE lib/glfw/src
 )
 
 message("Linking command updated")
-target_link_libraries(${PROJECT_NAME} glfw ${Vulkan_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} glfw )
 
 message("All ready to compile")
