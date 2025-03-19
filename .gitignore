@@ -33,3 +33,4 @@
 
 # Build Files
 /build
+/spirv #this folder is important to run shader to create simply run compileShader.ps1

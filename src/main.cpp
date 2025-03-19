@@ -1,8 +1,20 @@
-#include "include/main.hpp"
+#include <renderer.hpp>
+
+using namespace std;
 
 int main()
 {
-    window window(500, 500, "Hello World!");
-    window.start();
-    return EXIT_SUCCESS;
+  renderer app;
+
+  try
+  {
+    app.run();
+  }
+  catch (const std::exception &e)
+  {
+    std::cerr << e.what() << std::endl;
+    return EXIT_FAILURE;
+  }
+
+  return EXIT_SUCCESS;
 }
