@@ -1,5 +1,5 @@
 $src = "./src/shaders"
-$out = "../../spirv/"
+$out = "spirv/"
 
 $files = Get-ChildItem($src) -File
 
